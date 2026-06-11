@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Happy Birthday, Beautiful ❤️</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400&family=Dancing+Script:wght@700&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+  <!-- Flower Rain Canvas (always on top) -->
+  <canvas id="flowerCanvas"></canvas>
+
+  <!-- Confetti Canvas -->
+  <canvas id="confettiCanvas"></canvas>
+
+  <!-- Sparkles -->
+  <div id="sparkleContainer"></div>
+
+  <!-- Floating Hearts -->
+  <div id="heartsContainer"></div>
+
+  <!-- HERO SECTION -->
+  <section id="hero">
+    <div class="hero-bg-glow"></div>
+
+    <div class="hero-content">
+      <div class="title-top">
+        <span class="subtitle-script">A Special Day for a Special Soul</span>
+      </div>
+
+      <div class="photo-wrapper">
+        <div class="photo-glow-ring"></div>
+        <div class="photo-frame">
+          <img id="birthdayPhoto" src="" alt="Birthday Girl" />
+        </div>
+        <div class="photo-sparkles" id="photoSparkles"></div>
+      </div>
+
+      <h1 class="hero-title">Happy Birthday, Beautiful <span class="heart-inline">❤️</span></h1>
+      <p class="hero-tagline">Today, the universe celebrates you.</p>
+
+      <button class="surprise-btn" id="surpriseBtn" onclick="openSurprise()">
+        <span class="btn-icon">🎁</span>
+        <span class="btn-text">Open Your Birthday Surprise</span>
+        <span class="btn-glow"></span>
+      </button>
+    </div>
+  </section>
+
+  <!-- SURPRISE REVEAL SECTION -->
+  <section id="surpriseSection" class="hidden">
+
+    <!-- Birthday Message Card -->
+    <div class="glass-card message-card">
+      <div class="card-roses">🌹🌸🌺</div>
+      <h2 class="card-title">A Message From the Heart</h2>
+      <div class="typewriter-text" id="typewriterText"></div>
+      <div class="message-flowers">💐✨💕</div>
+    </div>
+
+    <!-- Animated Cake -->
+    <div class="cake-section">
+      <div class="cake-wrapper">
+        <div class="cake">
+          <div class="cake-top">
+            <div class="frosting"></div>
+            <div class="candles">
+              <div class="candle"><div class="flame"></div></div>
+              <div class="candle"><div class="flame"></div></div>
+              <div class="candle"><div class="flame"></div></div>
+              <div class="candle"><div class="flame"></div></div>
+              <div class="candle"><div class="flame"></div></div>
+            </div>
+          </div>
+          <div class="cake-body">
+            <div class="cake-layer layer1"></div>
+            <div class="cake-layer layer2"></div>
+            <div class="cake-layer layer3"></div>
+          </div>
+          <div class="cake-plate"></div>
+        </div>
+        <p class="cake-wish">Make a Wish! 🌟</p>
+      </div>
+    </div>
+
+    <!-- Photo Gallery -->
+    <div class="gallery-section">
+      <h2 class="gallery-title">You Are Radiant ✨</h2>
+      <div class="carousel-wrapper">
+        <div class="carousel" id="carousel">
+          <div class="carousel-slide active">
+            <img id="galleryPhoto1" src="" alt="Beautiful moment" />
+            <div class="slide-caption">"Shine bright, always." 🌟</div>
+          </div>
+          <div class="carousel-slide">
+            <img id="galleryPhoto2" src="" alt="Beautiful moment" />
+            <div class="slide-caption">"You make every room glow." ✨</div>
+          </div>
+          <div class="carousel-slide">
+            <img id="galleryPhoto3" src="" alt="Beautiful moment" />
+            <div class="slide-caption">"A beautiful soul, inside and out." 💕</div>
+          </div>
+        </div>
+        <button class="carousel-btn prev" onclick="prevSlide()">‹</button>
+        <button class="carousel-btn next" onclick="nextSlide()">›</button>
+        <div class="carousel-dots" id="carouselDots"></div>
+      </div>
+    </div>
+
+    <!-- Ending Countdown -->
+    <div class="ending-section" id="endingSection">
+      <div class="countdown-wrapper" id="countdownWrapper">
+        <div class="countdown-num" id="countdownNum">3</div>
+      </div>
+      <div class="final-reveal hidden" id="finalReveal">
+        <div class="final-text">You Are Truly Special</div>
+        <div class="final-heart">❤️</div>
+        <div class="final-sub">Happy Birthday, Beautiful. Today and always. 🌹</div>
+      </div>
+    </div>
+
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
